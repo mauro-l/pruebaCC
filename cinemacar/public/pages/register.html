@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaCar | Register</title>
+    <link rel="icon" type="image/png" sizes="32x32"  href="../asset/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../asset/icon/android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+<body class="bg-navy-950 bg-login bg-cover bg-center bg-no-repeat p-8 md:p-4">
+    <main class="flex flex-col justify-center m-auto md:max-w-2xl md:h-screen md:py-40">      
+        <section class="flex flex-col items-center gap-6 bg-[#445A99]/10 shadow-total shadow-black w-full text-white p-5">
+            <article>
+                <a href="../index.html"><img src="../asset/icon/isologo31.svg" alt="logo empresa"></a>
+            <h1 class="text-2xl m-2 text-center font-bold">CREAR CUENTA</h1>
+            </article>
+            <article class="w-full">
+                <form id="create" class="flex flex-col px-4 text-white/70 font-semibold gap-3">
+                    <div class="flex flex-wrap w-full justify-between sm:flex-nowrap sm:justify-around">
+                        <div class="flex sm:justify-start justify-between w-full mb-3">
+                            <label for="createName" class="after:content-['*'] after:text-2xl after:text-red-600/70">NOMBRE</label>
+                            <input id="createName" name="createName1" type="text" class="bg-transparent border-t-transparent border-x-transparent border-b-navy-100 border-b-solid mb-2 h-8 w-2/3" aria-autocomplete="none" autocomplete="off" required>
+                        </div>
+                        <div class="flex justify-between sm:justify-start w-full">
+                            <label for="createLastname" class="after:content-['*'] after:text-2xl after:text-red-600/70">APELLIDO</label>
+                            <input id="createLastname" name="createLastname1" type="text" class="bg-transparent border-t-transparent border-x-transparent border-b-navy-100 border-b-solid mb-2 h-8 w-2/3" aria-autocomplete="none" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap w-full justify-between sm:flex-nowrap md:justify-around">
+                        <div class="flex flex-wrap sm:flex-nowrap sm:justify-start justify-between w-full mb-3">
+                            <label for="createMail" class="after:content-['*'] after:text-2xl after:text-red-600/70">EMAIL</label>
+                            <input id="createMail" name="createMail1" type="email" class="bg-transparent border-t-transparent border-x-transparent border-b-navy-100 border-b-solid mb-2 h-8 w-2/3" aria-autocomplete="none" autocomplete="off" required>
+                        </div>
+                        <div class="flex flex-wrap sm:flex-nowrap justify-between sm:justify-start w-full">
+                            <label for="createDate" class="after:content-['*'] after:text-2xl after:text-red-600/70 text-xs">FECHA DE <br> NACIMNTO</label>
+                            <input id="createDate" name="createDate1" type="date" class="bg-transparent border-t-transparent border-x-transparent border-b-navy-100 border-b-solid mb-2 h-8 w-2/3" aria-autocomplete="none" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap md:flex-nowrap sm:justify-around">
+                        <div class="flex justify-between sm:justify-start w-full mb-2">
+                            <label for="createPass" class="after:content-['*'] after:text-2xl after:text-red-600/70">CONTRASEÑA</label>
+                            <input id="createPass" name="createPass1" type="password" class="bg-transparent border-t-transparent border-x-transparent border-b-navy-100 border-b-solid mb-2 h-8 w-2/3 text-sm" aria-autocomplete="none" autocomplete="off" required>
+                        </div>
+                        <div class="text-sm sm:text-base leading-3 sm:leading-3 flex justify-between sm:justify-start w-full">
+                            <label for="createPassword" class="after:content-['*'] after:text-2xl after:text-red-600/70 text-sm">REPETIR <br> CONTRASEÑA</label>
+                            <input id="createPassword" name="createPassword1" type="password" class="bg-transparent border-t-transparent border-x-transparent border-b-navy-100 border-b-solid mb-2 h-8 w-2/3 text-sm" aria-autocomplete="none" autocomplete="off" required>
+                        </div>
+                    </div>
+                    <div>
+                        <p id="verificarPass" class="text-sm text-navy-150/50 my-1 before:content-[attr(data-tip)]" data-tip="Debe contener">
+                            <span id="passLength" class="before:content-[attr(data-tip)]" data-tip="">  más de 6 caracteres</span>, 
+                            <span id="passMayus" class="before:content-[attr(data-tip)]" data-tip="">una mayuscula</span> y 
+                            <span id="passNum" class="before:content-[attr(data-tip)]" data-tip="">un numero.<br></span>
+                            <span id="passSimbols" class="after:content-[attr(data-tip)] before:content-[attr(data-tip)]" data-tip="🚨">Solo admite letras y numeros, No agregar simbolos ni espacios.</span>
+                        </p>
+                    </div>
+                    <div id="errorMsg" class="text-red-600 text-center m-2 hidden transition-opacity"></div>
+                    <div class="flex flex-col gap-5 justify-between w-full px-4 text-navy-150">
+                        <label for="newlaster">
+                            <input id="newlaster" name="newlaster1" type="checkbox" class="bg-navy-150/20 mr-2 rounded-md">Deseo recibir mails de estrenos y promociones
+                        </label>
+                        <label for="terms">
+                            <input type="checkbox" class="bg-navy-150/20 mr-2 rounded-md" name="terms1" id="terms" required>Acepto los <span class="text-green-400 font-semibold cursor-pointer">Términos, la Política de Privacidad </span> y <span class="text-green-400 font-semibold cursor-pointer">las Tarifas</span> 
+                        </label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="m-2 mb-6 boton boton-grad">Registrarse</button>
+                        <p>Ya tienes una cuenta?<a href="./login.html" class="text-green-400 font-semibold mx-3">Inicia sesión</a></p>
+                    </div>
+                </form>
+            </article>
+            
+            
+            <article class="text-center">
+                <div class="relative before:absolute before:content-[' '] before:bg-white/20 before:w-1/2 md:before:w-3/4 before:h-[1px] before:top-3 before:right-full
+                after:absolute after:content-[' '] after:bg-white/20 after:w-1/2 md:after:w-3/4 after:h-[1px] after:top-3 after:left-full">O</div>
+                <div class="flex gap-14 p-4">
+                    <img src="../asset/icon/fb_facebook_facebook logo_icon.svg" class="cursor-pointer rounded-full bg-navy-150/50  hover:rounded-full hover:boton-grad p-1 w-8">
+                    <img src="../asset/icon/google_icon.svg" class="cursor-pointer rounded-full bg-navy-150/50  hover:rounded-full hover:boton-grad p-1 w-8">
+                </div>
+            </article>
+        </section>        
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../js/register.js"></script>
+</body>
+</html>
