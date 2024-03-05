@@ -1,14 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "public/**/*",
-      "use": "@now/static-build",
-      "config": { "distDir": "public" }
-    }
-  ],
-  "routes": [
-    { "src": "/(.*)", 
-    "dest": "/$1" }
-  ]
+  "builds": [{ "src": "dist/**", "use": "@vercel/static" }],
+  "routes": [{ "handle": "filesystem" }]
 }
