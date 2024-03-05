@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      font-family: "Open", system-ui, sans-serif;
+    }
+  }
+
+@layer components{
+    .boton {
+        @apply py-2 px-8 rounded-full bg-[#7d78ff];
+    }
+    .boton-grad{
+        @apply bg-gradient-to-r from-[#5560ff] from-15% via-[#aa52a1] via-65% to-[#ff4343] to-100% transition-shadow hover:shadow-[#3B37BC] hover:shadow-lg;
+    }
+    .boton-active{
+        @apply bg-violet-700 ring ring-violet-300;
+    }
+    .grad{
+        @apply bg-gradient-to-r from-[#5560ff] from-15% via-[#aa52a1] via-65% to-[#ff4343] to-100%;
+    }
+    .troquel{
+        @apply border-dashed border-navy-100;
+    }
+    .tooltip-t{
+        @apply before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:-top-3 before:w-max before:max-w-xs before:-translate-x-1/2 before:-translate-y-full before:bg-navy-100 before:text-navy-50 before:rounded-md before:opacity-0 before:transition-all after:absolute after:left-1/2 after:-top-3 after:h-0 after:w-0 after:-translate-x-1/2 after:border-8 after:border-t-navy-100 after:border-l-transparent after:border-b-transparent after:border-r-transparent after:opacity-0 after:transition-all;
+    }
+    .tooltip-b{
+        @apply before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:left-1/2 before:-bottom-3 before:w-max before:max-w-xs before:-translate-x-1/2 before:translate-y-full before:bg-navy-100 before:text-navy-50 before:rounded-md before:opacity-0 before:transition-all after:absolute after:left-1/2 after:-bottom-3 after:h-0 after:w-0 after:-translate-x-1/2 after:border-8 after:border-b-navy-100 after:border-l-transparent after:border-t-transparent after:border-r-transparent after:opacity-0 after:transition-all;
+    }
+    .tooltip-r{
+        @apply before:content-[attr(data-tip)] before:absolute before:px-3 before:py-2 before:top-1/2 before:-right-3 before:w-max before:max-w-xs before:translate-x-full before:-translate-y-1/2 before:bg-navy-100 before:text-navy-50 before:rounded-md before:opacity-0 before:transition-all after:absolute after:top-1/2 after:-right-3 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-r-navy-100 after:border-l-transparent after:border-b-transparent after:border-t-transparent after:opacity-0 after:transition-all; 
+    }
+    .tooltip-hover{
+        @apply hover:before:opacity-100 hover:after:opacity-100;
+    }
+    .nav-grad{
+        background: url('../asset/bg-img/transparentNav.png'),linear-gradient(270deg, #10069f 0, #9b26b6 100%); 
+        box-shadow: 0 5px 2px 0 rgb(0 0 0 / 30%);
+    }
+    .news-grad{
+        border-radius: 1.5rem;        
+        background-image: -webkit-linear-gradient(0deg, #7400ba 0%, #0f5ae0 100%);
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .pg-active{
+        @apply relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+    }
+    .pg-default{
+        @apply relative inline-flex items-center px-4 py-2 text-sm font-semibold text-navy-150 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0;
+    }
+    .text-card{
+        @apply text-white text-xl p-3 font-bold absolute inset-0 flex justify-start items-end bg-gradient-to-b from-gray-700/10 via-gray-900/40 to-black;
+    }
+}  

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaCar | Candy</title>
+    <link rel="icon" type="image/png" sizes="32x32"  href="../asset/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../asset/icon/android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+<body class="bg-navy-900">
+    <header class="relative">
+        <nav class="bg-black/0 h-30 w-full py-5 flex justify-around lg:justify-evenly items-center text-white border-b border-navy-50/10 absolute top-0">
+            <div class="flex">
+                <a href="../index.html"><img src="../asset/icon/isologo31.svg" alt="logo cinemacar"></a>
+            </div>
+            <div class="md:flex hidden justify-evenly items-center">
+                <ul class="flex gap-6">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./tickets.html">Entradas</a></li>
+                    <li><a href="./candy.html">Candy</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div id="inicioSesionDinamico" class="md:flex hidden relative">
+                <div id="btn-dropdown" class="hidden absolute right-0 top-full px-3 py-2 my-1 mr-2 bg-navy-300 border-navy-100 border">
+                    <button onclick="cerrarSesion()"><p class="whitespace-nowrap">Cerrar Sesion</p></button>
+                </div>
+            </div>
+            <button onclick="menuHamburguesas()" class="flex md:hidden">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="md:hidden fixed top-0 right-0 w-4/5 h-full z-30 text-navy-50 bg-navy-300 hidden">
+            <button onclick="menuHamburguesas()" class="flex justify-center w-full p-5 md:hidden"><span class="material-symbols-outlined">close</span></button>
+            <ul id="listaMenu" class="flex flex-col items-center mt-12">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./tickets.html">Entradas</a></li>
+                <li><a href="./candy.html">Candy</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>                                
+            </ul>
+        </div>
+    </header>
+
+    <section class="">    
+        <article class="bg-cover bg-center bg-no-repeat bg-banner-candy">
+            <div class="pt-52 pb-28 text-white bg-[#1702026b]/30 bg-gradient-to-b from-[#001232]/10 from-0% to-[#001232] to-90%">
+                <h2 class="text-3xl text-center font-bold">Candy</h2>
+            </div>
+        </article>
+    </section>
+
+    <!-- BANNER MINS LEFT -->
+    <section class="p-10 border-solid border-y border-navy-100 bg-navy-300">
+        <article class="container">
+            <div class="text-white flex flex-wrap flex-col md:flex-row justify-around gap-5 md:gap-0 items-center content-center">
+                <div class="hidden lg:block">
+                    <a href="./tickets.html" class="boton boton-grad flex"><span class="material-symbols-outlined">
+                        keyboard_double_arrow_left
+                        </span>Back</a>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <div id="fecha" class="flex items-center gap-4 text-center"></div>
+                    <div>
+                        <ol class="flex items-center w-full p-3 space-x-2 text-sm font-medium text-center text-gray-500 bg-white border border-gray-200 rounded-lg dark:text-gray-400 sm:text-base dark:bg-navy-300 dark:border-navy-300 sm:p-4 sm:space-x-4 rtl:space-x-reverse">
+                            <li class="flex items-center">
+                                <span class="flex items-center justify-center w-5 h-5 me-2 text-xs border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
+                                    1
+                                </span>
+                                Tickets
+                                <svg class="w-3 h-3 ms-2 sm:ms-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 9 4-4-4-4M1 9l4-4-4-4"/>
+                                </svg>
+                            </li>
+                            <li class="flex items-center text-blue-600 dark:text-blue-500">
+                                <span class="flex items-center justify-center w-5 h-5 me-2 text-xs border border-blue-600 rounded-full shrink-0 dark:border-blue-500">
+                                    2
+                                </span>
+                                Candy
+                                <svg class="w-3 h-3 ms-2 sm:ms-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 9 4-4-4-4M1 9l4-4-4-4"/>
+                                </svg>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="flex items-center justify-center w-5 h-5 me-2 text-xs border border-gray-500 rounded-full shrink-0 dark:border-gray-400">
+                                    3
+                                </span>
+                                Finalizar
+                            </li>
+                        </ol>
+                    </div>                
+                </div>
+                <div class="flex flex-col items-center">
+                    <h2 class="text-2xl font-semibold">-- : --</h2>
+                    <h3 class="text-xl">Mins Left</h3>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!-- MOBILE DETAILS PRODUCTS -->
+    <section class="lg:hidden sticky top-0 flex z-20 justify-center">
+        <article class="w-full bg-navy-300 ">
+            <div class="text-navy-50 text-sm bg-navy-300 border-b border-dashed border-navy-100 p-4 flex justify-around items-center">
+                <div class="flex items-center">
+                    <h3 class="ml-1 flex text-navy-50">Tus productos:</h3>
+                    <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium rounded-full bg-[#ff4343] text-blue-300" id="cantidad-producto-mobile"></span>
+                </div>
+                <button id="mostrar-carrito-mobile" class="mr-2 text-center cursor-pointer underline underline-offset-2">
+                    <h3>VER RESUMEN<br> DE COMPRA</h3>
+                </button>
+            </div>
+            <div id="contenedor-productos-mobile" class="text-white bg-navy-300 border-y border-dashed border-navy-100 p-4 hidden">
+                <!-- se completa mediante js -->
+            </div>
+        </article>
+    </section>
+    <main class="w-11/12 mx-auto container p-4 lg:p-8">
+        <div class="grid gap-4 grid-cols-1 grid-rows-4 lg:grid-rows-3 lg:grid-cols-5 mx-auto">
+            <!-- ASIDE RESUMEN CART -->
+            <section id="asideCarrito" class="lg:col-[4/6] lg:flex lg:flex-col lg:grow hidden lg:sticky lg:top-0 lg:w-[350px] mx-auto">
+                <!-- ASIDE TITLE RESUMEN CART -->
+                <article class=" p-4 bg-navy-300 border-x border-t border-navy-100">
+                    <h1 class="text-white text-center font-semibold text-3xl border-b border-dashed border-navy-100 pb-4">CANDY CART</h1>
+                </article>
+                <!-- ASIDE FILM RESUME -->
+                <article class="text-white bg-navy-300 border-x border-navy-100 flex px-4 pb-10 gap-4">
+                    <div id="contenedorImg" class="flex flex-1"></div>
+                    <div id="contenedorInfo" class="flex flex-col flex-1">
+                        <div id="contenedorNombre" class="font-semibold"></div>
+                        <div id="contenedorHorario" class="mt-1 text-navy-50/70"></div>
+                        <div id="contenedorLugar" class="mt-1 text-navy-50/70"></div>
+                        <div id="contenedorBoleto" class="mt-2"></div>
+                    </div>
+                </article>
+                <!-- ASIDE BODY RESUMEN CART -->
+                <article class="border-solid border-x border-navy-100">
+                    <div class="text-white bg-navy-300 border-y border-dashed border-navy-100 pt-10 pb-5 px-4 relative">
+                        <span class="before:block before:absolute before:-inset-8 before:rounded-full before:bg-navy-900 absolute top-0 left-0 inline-block"></span>
+                        <h2 class="text-lg font-semibold">PRODUCTOS</h2>
+                        <div id="contenedor-productos-desktop" class="max-h-[100px] overflow-hidden">
+                            <!-- se agregan productos mediante js -->
+                        </div>
+                        <div class="flex justify-center items-center flex-wrap text-navy-50">
+                            <button onclick="desplegarCarrito()" id="aside-carrito-desktop" class="flex justify-center items-center flex-wrap"><span class="material-symbols-outlined">keyboard_double_arrow_down</span></button>
+                        </div>
+                        <span class="after:block after:absolute after:-inset-8 after:rounded-full after:bg-navy-900 absolute top-0 right-0 inline-block"></span>
+                    </div>
+                </article>
+                <!-- ASIDE SUBTOTAL RESUMEN CART -->
+                <article class="border-solid border-x border-navy-100">
+                    <div id="contenedor-precios-desktop" class="">
+                        <!-- se completa mediante js -->
+                    </div>
+                </article>
+                <!-- ASIDE TOTAL RESUMEN CART TICKET -->
+                <article class="text-white p-4 flex flex-col gap-3 bg-navy-500 border-solid border-b border-x border-navy-100">
+                    <div id="contenedor-total-desktop" class="">
+                        <!-- se completa mediante js -->
+                    </div>
+                    <div class="text-center">
+                        <button onclick="advertenciaElijaPeli()" class="boton boton-grad">SIGUIENTE</button>
+                    </div>
+                </article>
+            </section>
+            <!-- BODY SHOP -->
+            <section class="lg:col-span-3 lg:row-start-1 row-span-full lg:relative lg:z-20 xl:static">
+                <!-- BANNER PROMO -->
+                <article class="mb-3 flex justify-center">
+                    <img src="../asset/img/banner-promo.jpg" alt="">
+                </article>
+                <!-- MOBILE FILTER -->
+                <article  class="mb-3 flex flex-wrap gap-3 justify-around p-2 bg-navy-900 text-white">
+                    <button id="botonReset" class="border-navy-100 boton-active transition-shadow hover:shadow-[#3B37BC] hover:shadow-lg border rounded-full py-1 px-4 lg:py-2 lg:px-8">
+                        <p>Ver todos</p>
+                    </button>
+                    <select name="categoria" id="categorias" class="bg-navy-900 ring-1 ring-violet-300 rounded-full">
+                        <option disabled selected>Categorías</option>
+                        <option value="comidas">Comidas</option>
+                        <option value="pop">Popcorn</option>
+                        <option value="bebidas">Bebidas</option>
+                        <option value="golosinas">Golosinas</option>
+                        <option value="snacks">Snacks</option>
+                    </select>
+                    <select name="ordenar" id="ordenar" class="bg-navy-900 ring-1 ring-violet-300 rounded-full">
+                        <option disabled selected>Ordenar por</option>
+                        <option value="relevante">Más relevantes</option>
+                        <option value="menor">Menor precio</option>
+                        <option value="mayor">Mayor precio</option>
+                    </select>
+                </article>
+                <!-- PRODUCTS CARDS -->
+                <article id="productos" class="flex flex-row flex-wrap gap-5 justify-center">                    
+                    
+                </article>
+                
+                <div id="paginacion" class="flex items-center justify-between border-t border-navy-700 bg-navy-900 text-navy-150 my-8 px-4 py-3 sm:px-6">
+                    <!-- <div class="flex flex-1 justify-between sm:hidden">
+                      <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+                      <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+                    </div> -->
+                    <div class="flex flex-1 items-center justify-between">
+                      <div id="textoPag" class="hidden sm:flex">
+                        <!-- <p class="text-sm text-gray-700">
+                          Showing
+                          <span class="font-medium">1</span>
+                          to
+                          <span class="font-medium">10</span>
+                          of
+                          <span class="font-medium">97</span>
+                          results
+                        </p> -->
+                      </div>
+                      <div>
+                        <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                          <button id="prevBoton" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                            <span class="sr-only">Previous</span>
+                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
+                            </svg>
+                          </button>
+                          <div id="contenedorPaginacion" class="inline-flex">
+                              <!-- Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-navy-150 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" -->
+                              <!-- <button value="1" class="pg-active">1</button>
+                              <button value="2" aria-current="page" class="pg-default">2</button>
+                              <button value="3" class="pg-default sm:hidden">3</button>
+                              <button value="4" class="pg-default sm:hidden">4</button> -->
+                          </div>
+                          <button id="nextBoton" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                            <span class="sr-only">Next</span>
+                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </nav>
+                      </div>
+                    </div>
+                </div>                  
+            </section>
+
+            <!-- MOBILE CART -->            
+            <section class="lg:hidden flex justify-center">
+                <article id="elementToObserve" class="fixed bottom-0 w-full bg-navy-300 hidden">
+                    <div class="container flex flex-col">
+                        <!-- ASIDE SUBTOTAL RESUMEN CART -->
+                        
+                        <div id="contenedor-precios-mobile" class="hidden">
+                            <!-- Carga de precios dinamico -->
+                        </div>                        
+                        
+                        <!-- ASIDE TOTAL RESUMEN CART TICKET -->
+                    
+                        <div class="flex justify-center items-center flex-wrap text-navy-50">
+                            <button id="boton-precios-mobile" class="flex justify-center items-center flex-wrap"></button>
+                        </div>
+                        <div id="contenedor-total-mobile" class="">
+                            <!-- carga de precio total js -->
+                        </div>
+                    
+                    </div>
+                </article>
+            </section>
+        </div>
+    
+        
+    </main>
+    <footer class="bg-black text-white">
+        <section class="p-16 mx-16 flex flex-col items-center border-b-[0.5px] border-white/20">
+            <p class="text-center font-semibold text-xl mb-3">POWERED BY</p>
+            <img src="../asset/icon/imagotipo.svg" alt="logo empresa">
+        </section>
+        <section class="flex justify-around items-center w-full p-16">
+            <article>
+                <ul class="text-lg">
+                    <li><a href="../index.html#inicioCartelera">Cartelera</a></li>
+                    <li><a href="./tickets.html">Entradas</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./candy.html">Candy</a></li>
+                </ul>
+            </article>
+            <article class="flex flex-col items-center">
+                <figure>
+                    <img src="../asset/icon/isologo31.svg" alt="logo del cine">
+                    <ul class="flex flex-row justify-center m-3 gap-1">
+                        <li><img src="../asset/icon/footer-fb.png" alt="logo de red sociales"></li>
+                        <li><img src="../asset/icon/footer-ins.png" alt="logo de red sociales"></li>
+                        <li><img src="../asset/icon/footer-tw.png" alt="logo de red sociales"></li>
+                        <li><img src="../asset/icon/footer-tkt.png" alt="logo de red sociales"></li>
+                        <li><img src="../asset/icon/footer-lnk.png" alt="logo de red sociales"></li>
+                    </ul>
+                </figure>
+                <picture class="p-3">
+                    <img src="../asset/img/data-fiscal.png" alt="logo data fiscal">
+                </picture>
+            </article>
+
+        </section>
+        <section class="flex justify-center items-center">
+            <p class="border-t-[0.5px] border-stone-50/20 mx-16 w-full text-center p-3 text-xs">&copy Copyright &copy 2023 Mauro Laime.</p>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/candy.js"></script>
+    <script src="../src/navbar.js"></script>
+</body>
+</html>

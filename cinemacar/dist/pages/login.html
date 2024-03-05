@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaCar | Login</title>
+    <link rel="icon" type="image/png" sizes="32x32"  href="../asset/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../asset/icon/android-icon-192x192.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+<body class="bg-navy-950 bg-login bg-cover bg-center bg-no-repeat p-8 md:p-4">
+    <main class="flex flex-col justify-center m-auto max-w-lg h-screen py-40">            
+        <section class="flex flex-col items-center gap-3 lg:gap-6 bg-[#445A99]/10 shadow-total shadow-black w-full text-white p-5 lg:p-10">
+            <article>
+                <a href="../index.html"><img src="../asset/icon/isologo31.svg" alt="logo empresa"></a>
+                <h1 class="text-3xl text-center font-bold mt-3">LOGIN</h1>
+            </article>
+            <article class="w-full">
+                <form id="signIn" >
+                    <!-- FORMULARIO NOMBRE USUARIO -->
+                    <div class="flex flex-col px-4 text-white/70">
+                        <label for="username" class="mb-2 after:content-['*'] after:text-2xl after:text-red-600">EMAIL</label>
+    
+                        <input type="email" class="bg-transparent border-t-transparent border-x-transparent border-b-navy-100 border-b-solid mb-3" id="username" name="username" placeholder="Email..." autocomplete="off" required>
+                    </div>
+                    <!-- FORMULARIO CONTRASEÑA -->
+                    <div class="flex flex-col px-4 text-white/70">
+                        <label for="password" class="mb-2 after:content-['*'] after:text-2xl after:text-red-600">CONTRASEÑA</label>
+    
+                        <input type="password" class="bg-transparent border-t-transparent border-x-transparent border-b-navy-100 border-b-solid mb-1" id="password" name="password" placeholder="Contraseña..." autocomplete="off" required>
+                    </div>
+                    <div id="msgError" class="text-red-600 text-center m-2 hidden transition-opacity">
+                        <p>LOS DATOS INGRESADOS NO SON CORRECTOS.</p>
+                    </div>
+                    <div id="msgPass" class="text-red-600 text-center m-2 hidden transition-opacity">
+                        <p>CONTRASEÑA INCORRECTA.</p>
+                    </div>
+                    <!-- CHECKBOX USUARIO -->
+                    <div class="my-4 flex flex-col gap-5 md:flex-row justify-between w-full px-4 text-navy-150">
+                        <label for="remember" class=" " >
+                            <input type="radio" class="bg-navy-150/20 mr-2 relative tooltip-t before:text-sm tooltip-hover" data-tip="Proximamente..." name="remember" id="remember" disabled>Recordar Usuario
+                        </label>
+                        <h3 class="cursor-pointer animate-bounce text-white" id="msgHelp">Olvidé el Usuario</h3>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="m-2 mb-2 boton boton-grad">Iniciar Sesión</button>
+                    </div>
+                </form>
+            </article>
+            
+            <article class="text-center">
+                <p>No tenés cuenta?<a href="./register.html" class="text-green-400 font-semibold mx-3">Registrese aquí</a></p>
+            </article>
+            <article class="text-center">
+                <div class="relative before:absolute before:content-[' '] before:bg-white/20 before:w-1/2 md:before:w-3/4 before:h-[1px] before:top-3 before:right-full
+                after:absolute after:content-[' '] after:bg-white/20 after:w-1/2 md:after:w-3/4 after:h-[1px] after:top-3 after:left-full">O</div>
+                <div class="flex gap-14 p-4">
+                    <img src="../asset/icon/fb_facebook_facebook logo_icon.svg" class="cursor-pointer rounded-full bg-navy-150/50  hover:rounded-full hover:boton-grad p-1 w-8" alt="icono facebook">
+                    <img src="../asset/icon/google_icon.svg" class="cursor-pointer rounded-full bg-navy-150/50  hover:rounded-full hover:boton-grad p-1 w-8" alt="icono google">
+                </div>
+            </article>
+        </section>        
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../js/login.js"></script>
+</body>
+</html>
